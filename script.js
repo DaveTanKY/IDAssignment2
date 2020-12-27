@@ -4,13 +4,16 @@ async function getData(){
     const url = 'https://hp-api.herokuapp.com/api/characters'
     const response = await fetch(url);
     const data = await response.json();
-    test(data);
+    displayChar(data);
 
 }
 
 
 getData();
 
-function test(char){
-    console.log(char);
+function displayChar(charlist){
+    charlist.forEach(char => {
+        console.log(char.name);
+        $('body').append("<span class='name'>" + char.name + "</span>")
+    });
 }
