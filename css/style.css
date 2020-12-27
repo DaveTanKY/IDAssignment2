@@ -1,7 +1,4 @@
-.name {
-    font-size: 40px;
-}
-
+/* Header css */
 .text-white {
     display: flex;
     justify-content: space-around;
@@ -26,3 +23,40 @@
     height: 50px;
 }
 
+/* Character css */
+
+.char-main-content{
+    width: 100%;
+    height: auto;
+    background: grey;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.char-container{
+    width: 25%;
+    height: 100%;
+    color: white;
+    background-color: pink;
+    border: 2px solid black;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.char-img {
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.more-info-btn{
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 20px;
+}
