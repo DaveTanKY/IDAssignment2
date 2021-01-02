@@ -25,7 +25,25 @@
 
 /* Character css */
 
-.char-main-content{
+.character-body{
+    display: flex;
+    background-color: grey;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    font-size: 40px;
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid black;
+    margin: 30px;
+}
+
+#char-main-content{
     width: 100%;
     height: auto;
     background: grey;
@@ -34,7 +52,7 @@
     justify-content: center;
     align-items: center;
 }
-.char-container{
+#char-container{
     width: 25%;
     height: 100%;
     color: white;
@@ -59,4 +77,82 @@
     color: white;
     border: none;
     margin: 20px;
+}
+
+/*CSS for more information*/
+
+#more-details{
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.more-img {
+    width: 100%;
+
+    height: auto;
+
+}
+
+.more-img-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+
+}
+
+.more-txt-container{
+   
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.more-txt{
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+/*testing*/
+
+.card-container{
+    width: 70%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.more-body{
+    width: 60%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.more-title{
+    width: 60%;
+    text-align: center;
+    color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+#char-wiki-info{
+    width: 70%;
+    background: wheat;
+}
+
+.wiki-txt{
+    width: 70%;
+
 }
