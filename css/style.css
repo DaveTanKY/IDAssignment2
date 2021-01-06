@@ -52,6 +52,7 @@
     justify-content: center;
     align-items: center;
 }
+
 #char-container{
     width: 25%;
     height: 100%;
@@ -81,83 +82,90 @@
 
 /*CSS for more information*/
 
-#more-details{
+.more-info-card {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 70%;
-    height: auto;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: wheat;
-
-}
-
-.more-img {
-    width: 100%;
-    margin: 20px;
-    height: auto;
-}
-
-.more-img-container{
-    width: 100%;
-    height: auto;
-    margin-right: 30px;
-    display: flex;
-    justify-content: center;
-
-}
-
-.more-txt-container{
-    width: 100%;
-    margin-left: 20px;
-    height: auto;
+    min-width: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.more-txt{
-    font-size: 25px;
-    margin-top: 20px;
-}
-
-/*testing*/
-
-.card-container{
-    width: 70%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.more-body{
-    width: 60%;
-    height: auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.more-title{
-    width: 60%;
+    background-color: wheat;
+    color: white;
     text-align: center;
+    padding: 2em;
+}
+
+
+#more-details{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.char-image{
+    width: 250px;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+
+.char-name{
+    font-size: 50px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.char-main{
+    margin-top: 2em;
+}
+
+.char-name::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 2em;
+    background: black;
+    margin: 0.5em auto;
+}
+
+.char-text{
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 3px;
     color: black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid black;
+}
+
+/* responsive for character information card */
+@media (min-width: 1300px){
+    .more-info-card{
+        flex-direction: row;
+    }
+
+    .char-main{
+        text-align: left;
+        margin-left: 100px;
+    }
+
+    .char-name::after{
+        margin-left: 0;
+    }
+
+    .char-image{
+        width: 400px;
+    }
 }
 
 #char-wiki-info{
+    min-width: 400px;
     margin-top: 50px;
     width: 70%;
-    background: wheat;
+
 }
 
-.wiki-txt{
-    width: 70%;
+.wiki-text{
+    padding: 10px;
+    text-align: justify;
+}
 
+.card{
+    background: rgba(126, 80, 80, 0.466);
 }

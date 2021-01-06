@@ -32,17 +32,16 @@ function moreInfo(key) {
         if (char.name === key) {
             
             $('#char-main-content').append("<div id='more-details'>" +
-            "<div class='more-img-container'><img class='more-img' src='" + char.image + "'></div>" +
-            
-            "<div class='more-txt-container'><h5 class='card-title more-title'>More Information</h5>" +
-            "<div class='more-txt'>Name: " + char.name + "</div>" +
-            "<div class='more-txt'>Species: " + char.species + "</div>" +
-            "<div class='more-txt'>Ancestry: " + char.ancestry + "</div>" +
-            "<div class='more-txt'>Date of Birth: " + char.dateOfBirth + "</div>" +
-            "<div class='more-txt'>Gender: " + char.gender + "</div>" +
-            "<div class='more-txt'>House: " + char.house + "</div>" +
-            "<div class='more-txt'>Patronus: " + char.patronus + "</div>" +
-            "<div class='more-txt'>Wand Core: "+ char.wand.core + "</div></div>")
+            "<div class='more-info-card'><div class='char-sidebar'><img class='char-image' src='" + char.image + "' alt=''></div>" + 
+            "<div class='char-main'><h2 class='char-name'>" + char.name + "</h2>"+
+            "<p class='char-text'>Species: " + char.species + "</p>" +
+            "<p class='char-text'>Ancestry: " + char.ancestry + "</p>" +
+            "<p class='char-text'>Date of Birth: " + char.dateOfBirth + "</p>" +
+            "<p class='char-text'>Gender: " + char.gender + "</p>" +
+            "<p class='char-text'>House: " + char.house + "</p>" +
+            "<p class='char-text'>Patronus: " + char.patronus + "</p>" +
+            "<p class='char-text'>Wand Core: "+ char.wand.core + "</p>" +
+            "</div></div>")
             
 
             /*
@@ -68,8 +67,8 @@ function moreInfo(key) {
 
             $('#char-wiki-info').append("<div class='card border - primary mb - 3' style='max - width: 18rem;'>" +
                 "<div class='card-header'>About " + char.name + "</div>" +
-                    "<div class='card-body text-primary'>" +
-                        "<p class='card-text'>" + lore_dict[char.name] + "</p>" +
+                    "<div class='card-body'>" +
+                        "<p class='wiki-text'>" + lore_dict[char.name] + "</p>" +
                     "</div></div>");
 
 }
