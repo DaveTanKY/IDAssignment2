@@ -82,30 +82,34 @@
 /*CSS for more information*/
 
 #more-details{
-    width: 100%;
+    width: 70%;
     height: auto;
     margin-top: 100px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    background: wheat;
+
 }
 
 .more-img {
     width: 100%;
-
+    margin: 20px;
     height: auto;
-
 }
 
 .more-img-container{
     width: 100%;
     height: auto;
+    margin-right: 30px;
     display: flex;
+    justify-content: center;
 
 }
 
 .more-txt-container{
-   
     width: 100%;
+    margin-left: 20px;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -148,6 +152,7 @@
 }
 
 #char-wiki-info{
+    margin-top: 50px;
     width: 70%;
     background: wheat;
 }

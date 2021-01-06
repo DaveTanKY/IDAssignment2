@@ -19,8 +19,6 @@ function displayChar() {
             "<div class='name'>" + char.name + "</div>" +
             "<button class='more-info-btn' id='" + char.name + "' onclick='moreInfo(this.id)'>More information</button>" +
             "</div>");
-
-
     });
 }
 
@@ -32,18 +30,22 @@ function moreInfo(key) {
     //Checking which character user clicked on
     charlist.forEach(char => {
         if (char.name === key) {
-            /*
+            
             $('#char-main-content').append("<div id='more-details'>" +
             "<div class='more-img-container'><img class='more-img' src='" + char.image + "'></div>" +
-            "<div class='more-txt-container'><div class='more-txt'>Name: " + char.name + "</div>" +
+            
+            "<div class='more-txt-container'><h5 class='card-title more-title'>More Information</h5>" +
+            "<div class='more-txt'>Name: " + char.name + "</div>" +
             "<div class='more-txt'>Species: " + char.species + "</div>" +
             "<div class='more-txt'>Ancestry: " + char.ancestry + "</div>" +
             "<div class='more-txt'>Date of Birth: " + char.dateOfBirth + "</div>" +
             "<div class='more-txt'>Gender: " + char.gender + "</div>" +
             "<div class='more-txt'>House: " + char.house + "</div>" +
             "<div class='more-txt'>Patronus: " + char.patronus + "</div>" +
-            "<div class='more-txt'>Wand Core: " + char.wand.core + "</div></div>"
-            */
+            "<div class='more-txt'>Wand Core: "+ char.wand.core + "</div></div>")
+            
+
+            /*
             $('#char-main-content').append(
                 "<div class='card mb-3 card-container'>" +
                 "<div class='row g-0'>" +
@@ -62,6 +64,8 @@ function moreInfo(key) {
                 "<p class='card-text more-txt'>Patronus: " + char.patronus + "</p>" +
                 "<p class='card-text more-txt'>Wand Core: " + char.wand.core + "</p>" +
                 "</div></div></div></div>")
+                */
+
             $('#char-wiki-info').append("<div class='card border - primary mb - 3' style='max - width: 18rem;'>" +
                 "<div class='card-header'>About " + char.name + "</div>" +
                     "<div class='card-body text-primary'>" +
