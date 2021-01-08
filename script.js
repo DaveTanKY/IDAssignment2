@@ -48,15 +48,45 @@ function displayChar() {
     });
 }
 
+
+
 // More info is displayed when button is clicked
 function moreInfo(key) {
     //Empty the div container
     var x = document.getElementById("char-main-content");
     x.innerHTML = "";
     //Checking which character user clicked on
+    var patronus = '';
     charlist.forEach(char => {
-        if (char.name === key) {
+        /*
+        if (char.patronus === '')
+        {
+            patronus = 'Unknown';
             
+            
+        }
+        else
+        {
+            patronus = char.patronus;
+        }
+        */
+
+        
+
+        if (char.name === key) {
+            $('.back-btn-container').append("<div class='back-btn'><a href='character.html'>Back to Characters</a></div>")
+            Object.keys(char).forEach(function(key) {
+               if (char[key] === '')
+               {
+                   char[key] = 'Unknown';
+               }
+                console.log(char[key]);
+            })
+            if (char.wand.core === '')
+            {
+                char.wand.core = 'Unknown';
+            }
+
             $('#char-main-content').append("<div id='more-details'>" +
             "<div class='more-info-card'><div class='char-sidebar'><img class='char-image' src='" + char.image + "' alt=''></div>" + 
             "<div class='char-main'><h2 class='char-name'>" + char.name + "</h2>"+
@@ -96,6 +126,8 @@ function moreInfo(key) {
                     "<div class='card-body'>" +
                         "<p class='wiki-text'>" + lore_dict[char.name] + "</p>" +
                     "</div></div>");
+
+            
 
             var bg = '';
             var card = '';
