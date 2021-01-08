@@ -27,7 +27,7 @@
 
 .character-body{
     display: flex;
-    background-color: grey;
+    background-color: rgb(68, 65, 64);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -39,14 +39,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid white;
+    color: white;
     margin: 30px;
 }
 
 #char-main-content{
     width: 100%;
     height: auto;
-    background: grey;
+    background:rgb(68, 65, 64);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -55,15 +56,17 @@
 
 #char-container{
     width: 25%;
+    min-width: 250px;
     height: 100%;
     color: white;
-    background-color: pink;
+    background-color: #a39ea1;
     border: 2px solid black;
     margin: 20px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    border-radius: 20px;
 }
 
 .char-img {
@@ -71,6 +74,8 @@
     width: 200px;
     height: 300px;
     object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid white;
 }
 
 .more-info-btn{
@@ -78,17 +83,20 @@
     color: white;
     border: none;
     margin: 20px;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
 }
 
 /*CSS for more information*/
 
 .more-info-card {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid white;
     width: 70%;
     min-width: 400px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    background-color: wheat;
+    background-color: #a39ea1;
     color: white;
     text-align: center;
     padding: 2em;
@@ -161,11 +169,17 @@
 
 }
 
+.card-header {
+    color: white;
+    font-size: 30px;
+}
+
 .wiki-text{
     padding: 10px;
     text-align: justify;
 }
 
-.card{
-    background: rgba(126, 80, 80, 0.466);
+.cards{
+    border-radius: 20px;
+    background: #a39ea1;
 }
