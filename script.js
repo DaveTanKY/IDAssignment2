@@ -33,13 +33,23 @@ async function getData() {
     const response = await fetch(url);
     const data = await response.json();
     charlist = data;
-    displayChar();
+    displayChar(charlist);
     console.log(data);
+    
 }
+
 getData();
 // Appending data and elements into html
-function displayChar() {
-    charlist.forEach(char => {
+function displayChar(x) {
+    
+    resetPage();
+    $('.top-container').append("<form class='search-form' method='post'>" +
+      "<input type='text' class='search-box' placeholder='Search'>" +
+      "<button class='search-btn' type='button' id='search-name' onclick='searchChar(this.id)'>Search by Name</button>" +
+      "<button class='search-btn' type='button' id='search-house' onclick='searchChar(this.id)'>Search by House</button>" +
+    "</form>")
+
+    x.forEach(char => {
         $('#char-main-content').append("<div id='char-container'>" +
             "<img class='char-img' src='" + char.image + "'>" +
             "<div class='name'>" + char.name + "</div>" +
@@ -50,31 +60,18 @@ function displayChar() {
 
 
 
+
 // More info is displayed when button is clicked
 function moreInfo(key) {
     //Empty the div container
-    var x = document.getElementById("char-main-content");
-    x.innerHTML = "";
+    resetPage();
     //Checking which character user clicked on
     var patronus = '';
+    
     charlist.forEach(char => {
-        /*
-        if (char.patronus === '')
-        {
-            patronus = 'Unknown';
-            
-            
-        }
-        else
-        {
-            patronus = char.patronus;
-        }
-        */
-
-        
 
         if (char.name === key) {
-            $('.back-btn-container').append("<div class='back-btn'><a href='character.html'>Back to Characters</a></div>")
+            $('.top-container').append("<div class='back-btn'><a href='character.html'>Back to Characters</a></div>")
             Object.keys(char).forEach(function(key) {
                if (char[key] === '')
                {
@@ -98,28 +95,6 @@ function moreInfo(key) {
             "<p class='char-text'>Patronus: " + char.patronus + "</p>" +
             "<p class='char-text'>Wand Core: "+ char.wand.core + "</p>" +
             "</div></div>")
-            
-
-            /*
-            $('#char-main-content').append(
-                "<div class='card mb-3 card-container'>" +
-                "<div class='row g-0'>" +
-                "<div class='col-md-4 more-img-container'>" +
-                "<img class='more-img' src='" + char.image + "' alt='Char Image'>" +
-                "</div>" +
-
-                "<div class='card-body more-body'>" +
-                "<h5 class='card-title more-title'>More Information</h5>" +
-                "<div' ><p class='card-text more-txt'>Name: " + char.name + "</p>" +
-                "<p class='card-text more-txt'>Species: " + char.species + "</p>" +
-                "<p class='card-text more-txt'>Ancestry: " + char.ancestry + "</p>" +
-                "<p class='card-text more-txt'>Date of Birth: " + char.dateOfBirth + "</p>" +
-                "<p class='card-text more-txt'>Gender: " + char.gender + "</p>" +
-                "<p class='card-text more-txt'>House: " + char.house + "</p>" +
-                "<p class='card-text more-txt'>Patronus: " + char.patronus + "</p>" +
-                "<p class='card-text more-txt'>Wand Core: " + char.wand.core + "</p>" +
-                "</div></div></div></div>")
-                */
 
             $('#char-wiki-info').append("<div class='cards border - primary mb - 3' style='max - width: 18rem;'>" +
                 "<div class='card-header'>About " + char.name + "</div>" +
@@ -158,4 +133,35 @@ function moreInfo(key) {
             document.getElementById('char-main-content').style.background = bg;
         }
     })
+}
+
+function searchChar(key) {
+    var input = $('.search-box').val();
+    var searchBy
+    var newlist = [];
+    charlist.forEach(char => {
+        if(key === 'search-name')
+        {
+            searchBy = char.name;
+        }
+        else if(key === 'search-house')
+        {
+            searchBy = char.house;
+        }
+
+        if (searchBy.toLowerCase().includes(input.toLowerCase()))
+        {
+            newlist.push(char);
+        }
+        
+    })
+    console.log(newlist);
+    resetPage();
+    displayChar(newlist);
+}
+
+function resetPage(){
+    $(".search-form").remove();
+    var x = document.getElementById("char-main-content");
+    x.innerHTML = "";
 }

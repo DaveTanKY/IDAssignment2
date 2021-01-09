@@ -12,24 +12,23 @@
   <body>
     
 
-    <div class="pos-f-t">
-        <div class="collapse" id="navbarToggleExternalContent">
-          <div class="bg-dark p-4">
-            <h4 class="text-white">
-                <div class="nav-btn"><a class='nav' href="index.html">Home</a></div>
-                <div class="nav-btn"><a class='nav' href="character.html">Characters</a></div>
-                <div class="nav-btn"><a class='nav' href="index.html">Lore</a></div>
-            </h4>
-            
-          </div>
+    <div class="header">
+      <div class="header-content">
+        <div class="logo-container">
+          <!-- https://en.wikipedia.org/wiki/Harry_Potter -->
+            <img class="logo" src="images/harry-potter-logo.svg">
         </div>
-        <nav class="navbar navbar-dark bg-dark">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <img class="header-img" src="images/harrypotter-lightning.jpg">
-        </nav>
+        <input type="radio" name="slide" id="menu-btn">
+        <input type="radio" name="slide" id="cancel-btn">
+        <ul class="nav-links">
+          <label for="cancel-btn" class="btn cancel-btn"><i class="fas fa-times"></i></label>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="character.html">Characters</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
       </div>
+    </div>
 
       
 

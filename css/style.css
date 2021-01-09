@@ -92,13 +92,12 @@
         display: block;
     }
 
-  
-
     .nav-links::-webkit-scrollbar{
         width: 0px;
     }
 
     .nav-links{
+        margin: 0;
         position: fixed;
         height: 100vh;
         width: 100%;
@@ -127,9 +126,18 @@
         font-size: 20px;
     }
 
-    
+    .search-form{
+        flex-direction: column;
+        align-items: center;
+    }
 
-
+    .search-box{
+        width: 70%;
+    }
+    .search-btn{
+        margin-top: 20px;
+        width: 50%;
+    }
 }
 
 
@@ -140,7 +148,7 @@
 
 .character-body{
     display: flex;
-    background-image: linear-gradient(to bottom right, rgb(68, 65, 64), rgb(134, 22, 42)); 
+    background-image: linear-gradient(to bottom right, rgb(68, 65, 64), rgb(134, 22, 42),rgb(68, 65, 64) ); 
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -171,8 +179,7 @@
     min-width: 250px;
     height: 100%;
     color: white;
-    background-color: #a39ea1;
-    border: 2px solid black;
+    background-color: rgb(75, 72, 71);
     margin: 20px;
     display: flex;
     justify-content: center;
@@ -191,7 +198,7 @@
 }
 
 .more-info-btn{
-    background-color: black;
+    background: rgb(149, 145, 145, 0.2);
     color: white;
     border: none;
     margin: 20px;
@@ -199,6 +206,9 @@
     padding: 10px 15px 10px 15px;
 }
 
+.more-info-btn:hover{
+    background: rgb(149, 145, 145, 0.8);
+}
 /*CSS for more information*/
 
 .more-info-card {
@@ -292,16 +302,43 @@
 }
 
 .cards{
-    border-radius: 50px;
+    border-radius: 20px;
     background: #a39ea1;
 }
-
-.back-btn-container{
-    
+/* css for back button */
+.top-container{
+    margin-top: 30px;
+    margin-bottom: 50px;
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.search-box{
+    border: none;
+    color: black;
+
+}
+
+.search-btn{
+    background: rgb(122, 117, 117);
+    border-radius: 5px;
+    border: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.search-btn:hover{
+    background: rgb(243, 243, 243);
 }
 
 .back-btn{
@@ -324,3 +361,14 @@
 .back-btn:hover{
     background: rgb(149, 145, 145, 0.8);
 }
+
+.footer{
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+
