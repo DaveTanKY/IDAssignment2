@@ -42,6 +42,8 @@ $(document).ready(function(){
         interval : 3000
     });
 });
+
+const house_colors = {Gryffindor: '#9c5965', Slytherin: '#56756e', Hufflepuff: '#e6c06e', Ravenclaw: '#8494bd'}
 getData();
 // Appending data and elements into html
 function displayChar(x) {
@@ -53,8 +55,10 @@ function displayChar(x) {
       "<button class='search-btn' type='button' id='search-house' onclick='searchChar(this.id)'>Search by House</button>" +
     "</form>")
 
+    
     x.forEach(char => {
-        $('#char-main-content').append("<div id='char-container'>" +
+        console.log(house_colors[char.house])
+        $('#char-main-content').append("<div id='char-container' style='background-color: " + house_colors[char.house] +"'>" +
             "<img class='char-img' src='" + char.image + "'>" +
             "<div class='name'>" + char.name + "</div>" +
             "<button class='more-info-btn' id='" + char.name + "' onclick='moreInfo(this.id)'>More information</button>" +
