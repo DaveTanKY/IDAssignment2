@@ -35,9 +35,13 @@ async function getData() {
     charlist = data;
     displayChar(charlist);
     console.log(data);
-    
 }
 
+$(document).ready(function(){
+    $("#myCarousel").carousel({
+        interval : 3000
+    });
+});
 getData();
 // Appending data and elements into html
 function displayChar(x) {
