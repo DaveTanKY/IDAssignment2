@@ -26,7 +26,7 @@
     background: rgb(149, 145, 145);
 }
 
-
+/* CSS for navigation links */
 .nav-links li a {
     color: white;
     text-decoration: none;
@@ -79,6 +79,7 @@
     top: 10px;
 }
 
+/* hiding buttons when width is more than 880px */
 #menu-btn{
     display: none;
 }
@@ -89,6 +90,7 @@
 @media screen and (max-width: 880px)
 {
 
+    /* making the buttons visible nd changing menyu position to the left */
     .btn {
         display: block;
     }
@@ -117,6 +119,7 @@
         display: inline;
     }
 
+    /* when clicked displays the menu on the left */
     #menu-btn:checked ~ .nav-links{
         left: 0%;
     }
@@ -145,7 +148,7 @@
         width: 50%;
     }
 }
-/* Character css */
+/* css for Characters */
 
 .character-body{
     display: flex;
@@ -289,6 +292,7 @@
     }
 }
 
+/* character information from wiki */
 #char-wiki-info{
     min-width: 400px;
     margin-top: 50px;
@@ -367,6 +371,7 @@
     background: rgb(149, 145, 145, 0.8);
 }
 
+/* CSS for footer */
 .footer{
     margin-top: 20px;
     width: 100%;
@@ -376,6 +381,7 @@
     color: white;
 }
 
+/* CSS for index page */
 .home-container{
     width: 100%;
     display: flex;
@@ -435,6 +441,8 @@
     font-size: 25px;
     margin-top: 10px;
 }
+
+/* CSS for books and movies container */
 .books, .movies{
     
     background: snow;
@@ -483,6 +491,7 @@
     flex-direction: column;
 }
 
+/* CSS to change layout when width goes below 1000px */
 @media (max-width: 1000px)
 {
     .books, .movies{
@@ -504,12 +513,12 @@
         padding: 20px;
     }
 }
+
 /* Contact us page */
 .contact-main{
     width: 100%;
     display: flex;
     background-image: radial-gradient(rgb(82, 82, 82), rgb(0, 0, 0));
-    /* background-image: linear-gradient(to bottom right, rgb(68, 65, 64), rgb(134, 22, 42),rgb(68, 65, 64) );  */
     flex-direction: column;
     justify-content: center;
     align-items: center; 

@@ -1,7 +1,28 @@
 # Harry Potter Website
-The purpose of this harry potter site is to allow curious fans of the series "Harry Potter" access to information of the characters in "Harry Potter" The site is catering to those interested in learning more about the world of "Harry Potter".
+The purpose of this harry potter site is to allow curious fans of the "Harry Potter"  series access to information about the characters. The site is catering to those interested in learning more about the world of "Harry Potter".
 
-Users can find out more about the series such as the books written by J. K. Rowling and the movies that have aired. They can also search for specific characters and find out more about them such as, name, date of birth, their patronus and many more! 
+For my design, i chose to go with a black and grey man theme with a radial background. I chose this because i feel it gives of an enigmatic feel similar to the antagonist of the "Harry Potter" series.
+
+On the home page, users can find out more about the series such as the author J. K. Rowling, the books she has written and the movies that have aired. 
+
+The books and movies shown each have their own seperate description to allow the readers to have a glimpse of what the story is about.
+
+For responsiveness, the content of the page will shrink according to sthe size of the screen, making the site usable with most mobile phones. 
+
+As the screen becomes smaller, the picture of the author and the information about the series will decrease in size. Making it much easier for the user to read.
+
+After reaching a certain width size, the layout of both the books and movies portion of the home page will change. instead of displaying side by side with the description at the bottom. They are now displayed in columns with the description on the right. This is done so that the images can still retain their aspect ratio whilst making the description easily readable. This is also more pleasent to the eyes as it is not cluttered together. 
+
+On the characters page, the users are presented with all the current characters that are currenly available on the site. These characters are displayed in cards each with a different background color depending on which house they are from. They can search for specific characters either by name or by house with the search bar on top. By pressing on the more informations button, they can also find out more indepth information such as their species, ancestry, date of birth, gender, house, patronus and wand core! Furthermore, the characters each have a short description about themselves and the roles they play in the harry potter series.
+
+The characters page has been made so that the images and cards and search bar all become smaller according to the screen size. 
+
+In order for the character page to work, i used an API retrieve data. I then display that data according to the actions the user takes, such as searching for a specific name.
+
+Lastly is the contact page. This page serves as a feedback form for users who would like to send me feedback. They can do so by inputting thier name, email, number and comments. Furthermore, they can also give us suggestions on which characters are missing from the website.
+
+The forms in the contact page will not be submitted without properly filling out each field. This is done to stop spam and any errors from occuring. The forms are also responsive and will reduce in size according to the size of the screen while still maintaining its layout
+
 
 
 
@@ -24,9 +45,6 @@ This compact version allows users to click on a button which will then create an
 
 This makes the navigation bar responsive as it is usable even with the smallest of screens.
 
-The image slider on the home page serves as a teaser to the different films that has aired based on the books by J. K. Rowling. I decided to add an image slider as i personally feel that by seeing these familiar images, people are more likely to feel the urge to rewatch or read the book again. 
-
-The image slider i created is also responsive and will decrease in size depenging on the screen size.
 
 I added a general information card to allow new visitors to learn more about the harry potter series and its author. This is a friendly way of getting new users into the franchise as they read a short synopsis of the series to see if they are interested in it. 
 
@@ -134,10 +152,9 @@ The text for home page was taken from
 
 Navigation Bar Logo
 - [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter)
-Slider Images
-- [uploadvr article](https://uploadvr.com/harry-potter-smartphone-augmented-reality-game-is-coming-in-2019/)
-- [thompsonpubliclibrary movies](https://thompsonpubliclibrary.org/events/movies/)
-- [wallpaperaccess Harry Potter](https://wallpaperaccess.com/harry-potter-7)
+
+Author Image
+- [wikipedia J. K. Rowling](https://en.wikipedia.org/wiki/J._K._Rowling)
 
 Book Images
 - [wizardingworld books](https://www.wizardingworld.com/discover/books)
