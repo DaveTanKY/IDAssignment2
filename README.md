@@ -12,6 +12,8 @@ The second part of the website is the characters section. I chose to make this i
 
 Lastly, i made a contact page. This page serves as a page for users to send their comments and suggestions of the website. They can also send us suggestions of any missing characters they would like to see added to the website. 
 
+The API i chose to use is https://hp-api.herokuapp.com. I chose to use this api because it contains all the informaiton that i want to display on my site. It is able to give me information about the characters as well as their images which i used to display on my characters page. Another reason i chose this API is because it does not require an API key. This means that everyone will be able to access the information easily.
+
 # Features
 
 For my header, i wanted to make a minimalistic header that was easy to navigate while still retaining  the "Harry Potter" theme. I chose to have the 3 links on the top while having a harry potter logo on the side.
@@ -31,6 +33,8 @@ I added a general information card to allow new visitors to learn more about the
 I chose to use a black and white theme for the pages because i feel it gives a very enigmatic vibe, similar to the antagonist of the series. 
 
 Below the general information card, there are rows of harry potter books in chronological order. These books have a short description under them. This display allows the user to browse the book series and read the synopsis for each book.
+
+In addition, i also added the movies of the harry potter series and some information about them below the books. This shows the users the differnt ways they can know more about the harry potter series.
 
 For the characters page, i decided to display the characters in cards. Because each house has its own color schemes, I decided to have some fun and make each card have different background colors depending on each house the characters are put in.
 
@@ -55,6 +59,8 @@ The users can input information about their characters based on what is displaye
 # Features Left to implement
 
 Some additional features i would like to impliment is the adding of links to bookstores to purchase the various books in the series.
+
+I would also like to add links to the different movies that users can purchase
 
 # Technologies Used
 I used javascript to retrieve information from the API
@@ -85,20 +91,25 @@ Search for Characters test:
     2. menu links should disappear and is replaced by a button
     3. Clicking the button will show an overlay containing the menu links
 
-6. More information Responsiveness
+6. Books and movies responsiveness
+    1. Go to home page
+    2. reduce browser sie
+    3. after reducing the browser size to bellow 1000px, the movies will now be displayed in columns with its description on the right
+
+7. More information Responsiveness
     1. Go to character page
     2. click on more information button
     3. reduce browser size
     4. character information card will shrink relative to how small the browser size is
     5. Character information is displayed below image instead of beside when there is not enough space.
 
-7. Browsers tested on
+8. Browsers tested on
     1. Google Chrome
     2. Microsoft Edge
     3. Opera
     4. Internet Explorer
 
-8. Bugs discovered
+9. Bugs discovered
     1. Some functions on internet explorer was not able to work.
     The image slider and the characters from the javascript did not load.
 
@@ -110,8 +121,19 @@ Content
 The text for home page was taken from
 - [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter)
 - [wizardingworld books](https://www.wizardingworld.com/discover/books)
+- [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone_(film))
+- [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter_and_the_Chamber_of_Secrets_(film))
+- [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter_and_the_Prisoner_of_Azkaban_(film))
+- [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter_and_the_Goblet_of_Fire_(film))
+- [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter_and_the_Order_of_the_Phoenix_(film))
+- [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter_and_the_Half-Blood_Prince_(film))
+- [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_1)
+- [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2)
 
 **Media**
+
+Navigation Bar Logo
+- [wikipedia Harry Potter](https://en.wikipedia.org/wiki/Harry_Potter)
 Slider Images
 - [uploadvr article](https://uploadvr.com/harry-potter-smartphone-augmented-reality-game-is-coming-in-2019/)
 - [thompsonpubliclibrary movies](https://thompsonpubliclibrary.org/events/movies/)
@@ -121,9 +143,17 @@ Book Images
 - [wizardingworld books](https://www.wizardingworld.com/discover/books)
 
 Movie Images
+- [oroginalfilmart](https://www.originalfilmart.com/products/harry-potter-and-the-philosophers-stone-db)
+- [harrypotter.fandom](https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Chamber_of_Secrets_(film))
+- [imdb](https://www.imdb.com/title/tt0304141/)
+- [imdb](https://www.imdb.com/title/tt0330373/?ref_=ttmi_tt)
+- [harrypotter.fandom](https://harrypotter.fandom.com/wiki/Harry_Potter_and_the_Order_of_the_Phoenix_(film))
+- [imdb](https://www.imdb.com/title/tt0417741/)
 - [bellworks](https://bell.works/event/cinema-pop-ups-harry-potter-the-deathly-hallows-pt-1/)
 - [butteredkat](https://butteredkat.com/products/harry-potter-and-the-deathly-hallows-part-2-movie-poster-2011?variant=33359076032644)
-- 
+
+Character Images
+- [herokuapp](https://hp-api.herokuapp.com)
 
 JQuery
 - [jqyuery](https://jquery.com)

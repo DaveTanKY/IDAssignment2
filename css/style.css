@@ -46,7 +46,7 @@
     
 }
 
-.nav-links{
+.nav-links ul{
     
     display: flex;
     margin-top: 20px;
@@ -99,29 +99,33 @@
 
     .nav-links{
         margin: 0;
-        position: fixed;
+        position: absolute;
         height: 100vh;
         width: 100%;
         max-width: 400px;
-        display: block;
+        display: flex;
+        flex-direction: column;
         background: rgb(90, 87, 84);
         top: 0;
         left: -100%;
-        overflow-y: auto;
         line-height: 50px;
         padding: 50px 10px;
         transition: all 0.3s ease;
+    }
+
+    .nav-links ul{
+        display: inline;
     }
 
     #menu-btn:checked ~ .nav-links{
         left: 0%;
     }
 
-    .nav-links li {
+    .nav-links ul li {
         margin: 15px 10px;
     }
 
-    .nav-links li a {
+    .nav-links ul li a {
         padding: 0 20px;
         display: block;
         font-size: 20px;
@@ -381,18 +385,10 @@
     background-image: radial-gradient(rgb(82, 82, 82), rgb(0, 0, 0));
 }
 
-.carousel{
-    border: 5px solid black;
-    margin-top: 50px;
+.author-img{
     width: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider-img{
-    width: 70%;
-    height: auto;
+    height: 70%;
+    border: 2px solid black;
 }
 
 .about-series{
@@ -419,13 +415,26 @@
     border-radius: 50px;
     border: 5px solid black;
     display: flex;
+    flex-direction: column;
     background:white;
     color: black;
     padding: 50px;
     margin-top: 50px;
     text-align: justify;
+    justify-content: center;
+    align-items: center;
 }
 
+.about{
+    margin-top: 20px;
+    border-top: 2px solid black;
+    padding-top: 20px;
+}
+
+.author-name{
+    font-size: 25px;
+    margin-top: 10px;
+}
 .books, .movies{
     
     background: snow;

@@ -1,4 +1,5 @@
-
+// jshint esversion: 6
+// jshint esversion: 8
 // Character information from https://en.wikipedia.org/wiki/List_of_Harry_Potter_characters
 var charlist;
 var lore_dict = { 'Harry Potter': "Harry James Potter is a fictional character and the titular protagonist in J. K. Rowling's series of eponymous novels. The majority of the books' plot covers seven years in the life of the orphan Harry, who, on his eleventh birthday, learns he is a wizard. Thus, he attends Hogwarts School of Witchcraft and Wizardry to practise magic under the guidance of the kindly headmaster Albus Dumbledore and other school professors along with his best friends Ron Weasley and Hermione Granger. Harry also discovers that he is already famous throughout the novel's magical community, and that his fate is tied with that of Lord Voldemort – the internationally feared Dark Wizard and murderer of his parents, Lily and James. The book and film series revolve around Harry's struggle to adapt to the wizarding world and defeat Voldemort.",
@@ -25,11 +26,11 @@ var lore_dict = { 'Harry Potter': "Harry James Potter is a fictional character a
 'Vincent Crabbe' : "Vincent Crabbe and Gregory Goyle are Slytherin students in Harry's year; both of their fathers, Crabbe Sr and Goyle Sr, are Death Eaters. Due to their size and strength, the pair act as Draco Malfoy's minions and serve 'to do Malfoy's bidding', especially to intimidate fellow students. Both are entirely lacking in introspection or curiosity, though Crabbe is shown to be significantly smarter than Goyle. They seem unable to make up their own minds or to see things their own way.",
 'Gregory Goyle' : "Vincent Crabbe and Gregory Goyle are Slytherin students in Harry's year; both of their fathers, Crabbe Sr and Goyle Sr, are Death Eaters. Due to their size and strength, the pair act as Draco Malfoy's minions and serve 'to do Malfoy's bidding', especially to intimidate fellow students. Both are entirely lacking in introspection or curiosity, though Crabbe is shown to be significantly smarter than Goyle. They seem unable to make up their own minds or to see things their own way.",
 'Mrs Norris' : "Mrs Norris was the pet cat of Argus Filch, the caretaker of Hogwarts School of Witchcraft and Wizardry. Mrs Norris was described as having an unusually strong connection with her master, alerting him to any students misbehaving inside the school castle.",
-'Argus Filch' : "Argus Filch is the caretaker of Hogwarts. While he is not an evil character, he is ill-tempered, which makes him unpopular with the student body, and occasionally causes tension or exasperation with teachers and other staff. His knowledge of the secrets and short-cuts of the castle is almost unparalleled, except perhaps by the users of the Marauder's Map (the Weasley twins, Harry, Ron and Hermione), and Voldemort himself. He tends to favor almost sadistically harsh punishments, and gleefully allies himself with Umbridge when she prescribes such punishments on students."}
+'Argus Filch' : "Argus Filch is the caretaker of Hogwarts. While he is not an evil character, he is ill-tempered, which makes him unpopular with the student body, and occasionally causes tension or exasperation with teachers and other staff. His knowledge of the secrets and short-cuts of the castle is almost unparalleled, except perhaps by the users of the Marauder's Map (the Weasley twins, Harry, Ron and Hermione), and Voldemort himself. He tends to favor almost sadistically harsh punishments, and gleefully allies himself with Umbridge when she prescribes such punishments on students."};
 
 // Retreiving character data from API
 async function getData() {
-    const url = 'https://hp-api.herokuapp.com/api/characters'
+    const url = 'https://hp-api.herokuapp.com/api/characters';
     const response = await fetch(url);
     const data = await response.json();
     charlist = data;
@@ -37,27 +38,26 @@ async function getData() {
     console.log(data);
 }
 
-$(document).ready(function(){
-    $("#myCarousel").carousel({
-        interval : 3000
-    });
-});
 
-const house_colors = {Gryffindor: '#9c5965', Slytherin: '#56756e', Hufflepuff: '#e6c06e', Ravenclaw: '#8494bd'}
+// saving house color schemes in dictionary
+const house_colors = {Gryffindor: '#9c5965', Slytherin: '#56756e', Hufflepuff: '#e6c06e', Ravenclaw: '#8494bd'};
 getData();
+
 // Appending data and elements into html
 function displayChar(x) {
     
+    // deletes charcter cards and top container
     resetPage();
+    // appends a search form for users
     $('.top-container').append("<form class='search-form' method='post'>" +
       "<input type='text' class='search-box' placeholder='Search'>" +
       "<button class='search-btn' type='button' id='search-name' onclick='searchChar(this.id)'>Search by Name</button>" +
       "<button class='search-btn' type='button' id='search-house' onclick='searchChar(this.id)'>Search by House</button>" +
-    "</form>")
+    "</form>");
 
-    
+    // loop to go through list and display characters
     x.forEach(char => {
-        console.log(house_colors[char.house])
+        console.log(house_colors[char.house]);
         $('#char-main-content').append("<div id='char-container' style='background-color: " + house_colors[char.house] +"'>" +
             "<img class='char-img' src='" + char.image + "'>" +
             "<div class='name'>" + char.name + "</div>" +
@@ -70,28 +70,31 @@ function displayChar(x) {
 
 
 // More info is displayed when button is clicked
+// key is retrieved from the id of the button which is set to the name of the character
 function moreInfo(key) {
     //Empty the div container
     resetPage();
-    //Checking which character user clicked on
-    var patronus = '';
-    
+
+    //Checking which character user clicked on based on the key that was passed through when button is clicked
     charlist.forEach(char => {
 
         if (char.name === key) {
-            $('.top-container').append("<div class='back-btn'><a href='character.html'>Back to Characters</a></div>")
+            // appends a back button 
+            $('.top-container').append("<div class='back-btn'><a href='character.html'>Back to Characters</a></div>");
             Object.keys(char).forEach(function(key) {
+                // setting value to unknown if API does not have a value for an attribute
                if (char[key] === '')
                {
                    char[key] = 'Unknown';
                }
                 console.log(char[key]);
-            })
+            });
             if (char.wand.core === '')
             {
                 char.wand.core = 'Unknown';
             }
 
+            // displaying more information of the character on the card
             $('#char-main-content').append("<div id='more-details'>" +
             "<div class='more-info-card'><div class='char-sidebar'><img class='char-image' src='" + char.image + "' alt=''></div>" + 
             "<div class='char-main'><h2 class='char-name'>" + char.name + "</h2>"+
@@ -102,8 +105,9 @@ function moreInfo(key) {
             "<p class='char-text'>House: " + char.house + "</p>" +
             "<p class='char-text'>Patronus: " + char.patronus + "</p>" +
             "<p class='char-text'>Wand Core: "+ char.wand.core + "</p>" +
-            "</div></div>")
+            "</div></div>");
 
+            // appending a card with information based on the character chosen
             $('#char-wiki-info').append("<div class='cards border - primary mb - 3' style='max - width: 18rem;'>" +
                 "<div class='card-header'>About " + char.name + "</div>" +
                     "<div class='card-body'>" +
@@ -112,6 +116,7 @@ function moreInfo(key) {
 
             
 
+            // setting background and card color based on the house the person belongs to
             var bg = '';
             var card = '';
             if(char.house === 'Gryffindor')
@@ -140,12 +145,15 @@ function moreInfo(key) {
             document.getElementsByClassName('character-body')[0].style.background = bg;
             document.getElementById('char-main-content').style.background = bg;
         }
-    })
+    });
 }
 
+// search function
+// key returned is the returned value of the button id depending on if the user chsoe to search by character or by house
 function searchChar(key) {
+    // retrieving value from text box
     var input = $('.search-box').val();
-    var searchBy
+    var searchBy;
     var newlist = [];
     charlist.forEach(char => {
         if(key === 'search-name')
@@ -157,17 +165,19 @@ function searchChar(key) {
             searchBy = char.house;
         }
 
+        // comparing values of input and the field chosen for comparison (name/house)
         if (searchBy.toLowerCase().includes(input.toLowerCase()))
         {
             newlist.push(char);
         }
         
-    })
-    console.log(newlist);
+    });
     resetPage();
+    // sending new list with only characters belonging to the chosen house or name contains input
     displayChar(newlist);
 }
 
+// function to reset page whenever user chooses a character or searches for specific character
 function resetPage(){
     $(".search-form").remove();
     var x = document.getElementById("char-main-content");
