@@ -1,4 +1,6 @@
 # Harry Potter Website
+
+- [Website Link](https://davetanky.github.io/IDAssignment2/)
 The purpose of this harry potter site is to allow curious fans of the "Harry Potter"  series access to information about the characters. The site is catering to those interested in learning more about the world of "Harry Potter".
 
 For my design, i chose to go with a black and grey man theme with a radial background. I chose this because i feel it gives of an enigmatic feel similar to the antagonist of the "Harry Potter" series.
