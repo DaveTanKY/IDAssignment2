@@ -112,11 +112,18 @@ The text for home page was taken from
 - [wizardingworld books](https://www.wizardingworld.com/discover/books)
 
 **Media**
-Slider Pictures
+Slider Images
 - [uploadvr article](https://uploadvr.com/harry-potter-smartphone-augmented-reality-game-is-coming-in-2019/)
-- [thompsonpubliclibrary movies] (https://thompsonpubliclibrary.org/events/movies/)
+- [thompsonpubliclibrary movies](https://thompsonpubliclibrary.org/events/movies/)
 - [wallpaperaccess Harry Potter](https://wallpaperaccess.com/harry-potter-7)
+
+Book Images
 - [wizardingworld books](https://www.wizardingworld.com/discover/books)
+
+Movie Images
+- [bellworks](https://bell.works/event/cinema-pop-ups-harry-potter-the-deathly-hallows-pt-1/)
+- [butteredkat](https://butteredkat.com/products/harry-potter-and-the-deathly-hallows-part-2-movie-poster-2011?variant=33359076032644)
+- 
 
 JQuery
 - [jqyuery](https://jquery.com)
